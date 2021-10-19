@@ -19,6 +19,7 @@ const ResumeStyle = styled.section`
         margin: 0;
         padding: 0;
     }
+    a { color: inherit; text-decoration: none; border: 2px solid #000; border-radius: 25px; padding: 10px 18px; }
 `;
 
 const Row = styled.div`
