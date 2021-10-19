@@ -40,7 +40,9 @@ export default function Resume() {
 
                 <div>
                     <ul>
-                        <li data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">Download now</li>
+                        <li data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
+                            <a href="/resume_2021.pdf" title="Download Resume">Download now</a>
+                        </li>
                     </ul>
                 </div>
 
