@@ -52,6 +52,9 @@ export default function Contact() {
                     <div>
                         <ul data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
                             <li>
+                                <a href="https://www.napacreativeco.com" title="Napa Creative Company">Napa Creative Co.</a>
+                            </li>
+                            <li>
                                 <a href="https://www.dribbble.com/jamesadamrogers" title="Dribbble">Dribbble</a>
                             </li>
                             <li>
