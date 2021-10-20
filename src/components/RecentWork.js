@@ -45,6 +45,9 @@ const Slides = styled.div`
 `;
 
 const Slide = styled.div`
+    @media (min-width: 1300px) {
+        height: 450px;
+    }
     height: 300px;
     background-color: #000;
     background-size: cover;
