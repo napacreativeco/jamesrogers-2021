@@ -19,6 +19,10 @@ const ContactStyles = styled.section`
         margin: 0;
         padding: 0;
     }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 `;
 
 const Row = styled.div`
@@ -47,9 +51,15 @@ export default function Contact() {
                 <ContactList>
                     <div>
                         <ul data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
-                            <li>Dribbble</li>
-                            <li>LinkedIn</li>
-                            <li>Email</li>
+                            <li>
+                                <a href="https://www.dribbble.com/jamesadamrogers" title="Dribbble">Dribbble</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/jamesadamrogers/" title="LinkedIn">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a href="mailto:hello@napacreativeco.com" title="Email">Email</a>
+                            </li>
                         </ul>
                     </div>
                 </ContactList>

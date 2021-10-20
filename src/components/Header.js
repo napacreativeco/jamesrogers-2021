@@ -22,9 +22,10 @@ const Row = styled.div`
 const Logo = styled.div`
     span {
         background: #000;
-        color: #f3e1d4;
+        color: #f5f3f1;
         padding: 6px;
         font-size: 1.2rem;
+        white-space: nowrap;
     }
 `;
 

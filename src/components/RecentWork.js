@@ -29,7 +29,7 @@ const Row = styled.div`
     width: 100%;
     padding: 20px;
 
-    @media (max-width: 375px) {
+    @media (max-width: 550px) {
         grid-template-columns: 1fr;
     }
 `;
