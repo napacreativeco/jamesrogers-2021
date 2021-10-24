@@ -61,7 +61,7 @@ export default function RecentWork() {
         <RecentStyles>
 
             <Row>
-                <div style={{ 'padding': '20px' }}>
+                <div style={{ 'padding': '0px 20px 0px 20px' }}>
                     <h1>Recent Work</h1>
                 </div>
 

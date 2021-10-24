@@ -1,5 +1,6 @@
 import * as React from "react"
 import "../style.css"
+import AnimatedCursor from "react-animated-cursor"
 
 import Header from "../components/Header"
 import RecentWork from "../components/RecentWork"
@@ -17,6 +18,15 @@ const pageStyles = {
 const IndexPage = () => {
     return ( 
         <main style={pageStyles}>
+
+            <AnimatedCursor
+            innerSize={15}
+            outerSize={20}
+            color='0, 0, 0'
+            outerAlpha={0.2}
+            innerScale={2}
+            outerScale={3}
+            />
 
             <GridBackground />
 
