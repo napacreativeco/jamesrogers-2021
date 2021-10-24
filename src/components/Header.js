@@ -14,9 +14,12 @@ const HeaderStyles = styled.header`
 
 const Row = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    padding: 20px;
+    grid-template-columns: 1fr 3fr;
+
+    @media (max-width: 550px) {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
 `;
 
 const Logo = styled.div`
@@ -24,28 +27,21 @@ const Logo = styled.div`
         background: #000;
         color: #f5f3f1;
         padding: 6px;
-        font-size: 1.2rem;
+        font-size: 0.7rem;
         white-space: nowrap;
+    }
+    @media (max-width: 550px) {
+        display: flex;
+        justify-content: center;
     }
 `;
 
 const Item = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
     @media (max-width: 550px) {
         display: none;
-    }
-`;
-
-const MobileItem = styled.div`
-    display: none;
-    padding: 0px 0px 0px 20px;
-    p {
-        padding: 0;
-        margin: 0;
-    }
-
-    @media (max-width: 550px) {
-        display: flex;
     }
 `;
 
@@ -60,23 +56,18 @@ export default function Header() {
                     <span>James Rogers</span>
                 </Logo>
 
-                <Item style={{ 'marginRight': '10px'}}>
+                <Item>
                     <ul>
                         <li>Front-End Development</li>
                         <li>Product Design</li>
                     </ul>
-                </Item>
 
-                <Item>
                     <ul>
                         <li>napacreativeco.com</li>
                         <li>hello@napacreativeco.com</li>
                     </ul>
                 </Item>
             </Row>
-            <MobileItem>
-                <p>Front-End Development, Product Design</p>
-            </MobileItem>
 
         </HeaderStyles>
     )

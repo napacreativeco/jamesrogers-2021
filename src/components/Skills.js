@@ -19,6 +19,10 @@ const SkillsStyles = styled.section`
         margin: 0;
         padding: 0;
     }
+
+    @media (max-width: 550px) {
+        padding-top: 100px;
+    }
 `;
 
 const Row = styled.div`
@@ -52,7 +56,7 @@ export default function Skills() {
 
                 <SkillList>
                     <div>
-                        <ul data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
+                        <ul>
                             <li>Photoshop</li>
                             <li>Illustrator</li>
                             <li>AfterEffects</li>
@@ -60,7 +64,7 @@ export default function Skills() {
                         </ul>
                     </div>
                     <div>
-                        <ul data-sal="slide-up" data-sal-delay="600" data-sal-easing="ease">
+                        <ul>
                             <li>Figma</li>
                             <li>WordPress</li>
                             <li>React</li>
@@ -68,7 +72,7 @@ export default function Skills() {
                         </ul>
                     </div>
                     <div>
-                        <ul data-sal="slide-up" data-sal-delay="900" data-sal-easing="ease">
+                        <ul>
                             <li>HTML</li>
                             <li>CSS, SCSS</li>
                             <li>JavaScript, jQuery</li>

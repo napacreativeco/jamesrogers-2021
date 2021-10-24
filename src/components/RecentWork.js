@@ -8,11 +8,12 @@ import SonomaPac from "../images/sonomapac.jpg"
 import FHGT from "../images/fhgt.jpg"
 import Thrifty from "../images/thrifty.jpg"
 
+
 const RecentStyles = styled.section`
     min-height: 100vh;
     width: 100%;
-    padding-top: 25vh;
     display: block;
+    padding-top: 10vh;
     h1 {
         margin: 0;
         padding: 0;
@@ -27,7 +28,6 @@ const Row = styled.div`
     grid-template-columns: 1fr 3fr;
     height: 100%;
     width: 100%;
-    padding: 20px;
 
     @media (max-width: 550px) {
         grid-template-columns: 1fr;
@@ -61,7 +61,7 @@ export default function RecentWork() {
         <RecentStyles>
 
             <Row>
-                <div>
+                <div style={{ 'padding': '20px' }}>
                     <h1>Recent Work</h1>
                 </div>
 

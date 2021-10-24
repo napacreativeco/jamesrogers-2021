@@ -50,7 +50,7 @@ export default function Contact() {
 
                 <ContactList>
                     <div>
-                        <ul data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
+                        <ul>
                             <li>
                                 <a href="https://www.napacreativeco.com" title="Napa Creative Company">Napa Creative Co.</a>
                             </li>
