@@ -20,12 +20,12 @@ const IndexPage = () => {
         <main style={pageStyles}>
 
             <AnimatedCursor
-            innerSize={15}
-            outerSize={20}
+            innerSize={25}
+            outerSize={25}
             color='0, 0, 0'
             outerAlpha={0.2}
             innerScale={2}
-            outerScale={3}
+            outerScale={5}
             />
 
             <GridBackground />
