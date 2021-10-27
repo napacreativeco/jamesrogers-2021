@@ -163,3 +163,13 @@
     transform: translate(0px, -50%);
   }
 }
+
+@media screen and (max-width: 550px) {
+  .cursor-wrapper,
+  .main-cursor,
+  .main-cursor-background,
+  .secondary-cursor,
+  .cursor-background {
+    display: none !important;
+  }
+}

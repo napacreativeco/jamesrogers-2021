@@ -46,31 +46,36 @@ const IndexPage = () => {
         }, 1000);
 
       Aos.init({ duration: 1000 });
-    }, [])
+    }, []);
+
+    const isTouchDevice = () => {
+        return window.matchMedia("(pointer: coarse)").matches
+    }
+    console.log(isTouchDevice())
 
     return ( 
         <CustomCursorManager>
-        <main style={pageStyles}>
+            <main style={pageStyles}>
 
-            <LoadingStyles className="preloader" style={{ 'opacity': `${loading}`, 'display': `${loaded}` }}>
-                LOADING
-            </LoadingStyles>
+                <LoadingStyles className="preloader" style={{ 'opacity': `${loading}`, 'display': `${loaded}` }}>
+                    LOADING
+                </LoadingStyles>
 
-            <CustomCursor />
+                <CustomCursor />
 
-            <Header  />
+                <Header  />
 
-            <Hero />
+                <Hero />
 
-            <RecentWork />
+                <RecentWork />
 
-            <Skills />
+                <Skills />
 
-            <Resume />
+                <Resume />
 
-            <Contact />
+                <Contact />
 
-        </main>
+            </main>
         </CustomCursorManager>
     )
 }
