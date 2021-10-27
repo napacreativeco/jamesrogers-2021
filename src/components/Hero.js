@@ -11,19 +11,30 @@ const HeroStyles = styled.section`
     text-align: center;
     padding: 60px;
     h1 {
-        font-size: 4rem;
+        font-size: 4vw;
         margin: 0;
     }
+    p {
+        font-size: 2vw;
+    }
     @media (max-width: 768px) {
+        padding: 20px;
         h1 {
-            font-size: 3.5rem;
+            font-size: 5vw;
             margin: 0;
+        }
+        p {
+            font-size: 3vw;
         }
     }
     @media (max-width: 550px) {
+        padding: 10px;
         h1 {
-            font-size: 3rem;
+            font-size: 2rem;
             margin: 0;
+        }
+        p {
+            font-size: 4vw;
         }
     }
 `;
@@ -31,7 +42,7 @@ const HeroStyles = styled.section`
 export default function Hero() {
     return (
         <HeroStyles>
-            <h1 className="target">Front-End Development, Product &amp; Promotional Design</h1>
+            <h1 className="target">Front-End Development,<br />Product Design</h1>
             <p>James Rogers.</p>
         </HeroStyles>
     )
