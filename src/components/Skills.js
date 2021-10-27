@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import styled from "styled-components"
 
 const SkillsStyles = styled.section`
@@ -46,6 +46,7 @@ const SkillList = styled.div`
 `;
 
 export default function Skills() {
+
     return (
         <SkillsStyles>
                 
@@ -56,7 +57,7 @@ export default function Skills() {
 
                 <SkillList>
                     <div>
-                        <ul>
+                        <ul data-aos="fade-up">
                             <li>Photoshop</li>
                             <li>Illustrator</li>
                             <li>AfterEffects</li>
@@ -64,7 +65,7 @@ export default function Skills() {
                         </ul>
                     </div>
                     <div>
-                        <ul>
+                        <ul data-aos="fade-up" data-aos-delay="300">
                             <li>Figma</li>
                             <li>WordPress</li>
                             <li>React</li>
@@ -72,7 +73,7 @@ export default function Skills() {
                         </ul>
                     </div>
                     <div>
-                        <ul>
+                        <ul data-aos="fade-up" data-aos-delay="600">
                             <li>HTML</li>
                             <li>CSS, SCSS</li>
                             <li>JavaScript, jQuery</li>

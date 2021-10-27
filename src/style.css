@@ -16,10 +16,13 @@ body {
     max-width: 100vw;
     overflow-x: hidden;
     font-family: "Apfel Regular";
-    background: #f5f3f1;
+    background: #ffffff;
     color: #000;
 }
 h1, h2, h3, h4, h5 {
     font-family: "Apfel Bold";
 }
-
+html,
+body {
+    cursor: none;
+}

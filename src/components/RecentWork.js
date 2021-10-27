@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import styled from "styled-components"
 
 import WebIllustration from "../images/web-illustration.png"
@@ -36,8 +36,9 @@ const Row = styled.div`
 
 const Slides = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: stretch;
+    grid-gap: 4px;
 
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
@@ -45,18 +46,33 @@ const Slides = styled.div`
 `;
 
 const Slide = styled.div`
-    @media (min-width: 1300px) {
-        height: 450px;
-    }
-    height: 300px;
     background-color: #000;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 1s;
+    height: 100%;
+    &:hover {
+        transform: scale(1.2);
+    }
+`;
+
+const SlideMask = styled.div`
+    @media (min-width: 1300px) {
+        height: 400px;
+    }
+    @media (max-width: 768px) {
+        height: 350px;
+    }
+    height: 200px;
+    overflow: hidden;
 `;
 
 export default function RecentWork() {
+
+
+
     return (
         <RecentStyles>
 
@@ -65,13 +81,81 @@ export default function RecentWork() {
                     <h1>Recent Work</h1>
                 </div>
 
-                <Slides>
-                    <Slide style={{ 'background': `url(${WebIllustration})`, 'backgroundSize': 'cover', 'backgroundPosition': 'center' }}>&nbsp;</Slide>
-                    <Slide style={{ 'background': `url(${Farma})`, 'backgroundSize': 'cover', 'backgroundPosition': 'center' }}>&nbsp;</Slide>
-                    <Slide style={{ 'background': `url(${Amex})`, 'backgroundSize': 'cover', 'backgroundPosition': 'center' }}>&nbsp;</Slide>
-                    <Slide style={{ 'background': `url(${SonomaPac})`, 'backgroundSize': 'cover', 'backgroundPosition': 'center' }}>&nbsp;</Slide>
-                    <Slide style={{ 'background': `url(${FHGT})`, 'backgroundSize': 'cover', 'backgroundPosition': 'center' }}>&nbsp;</Slide>
-                    <Slide style={{ 'background': `url(${Thrifty})`, 'backgroundSize': 'cover', 'backgroundPosition': 'center' }}>&nbsp;</Slide>
+                <Slides data-aos="fade-up">
+
+                    <SlideMask>
+                        <Slide 
+                            className="target"
+                            style={{ 
+                                'background': `url(${WebIllustration})`,
+                                'backgroundSize': 'cover',
+                                'backgroundPosition': 'center'
+                            }}
+                        >
+                            &nbsp;
+                        </Slide>
+                    </SlideMask>
+                    <SlideMask>
+                        <Slide
+                            className="target"
+                            style={{ 
+                                'background': `url(${Farma})`,
+                                'backgroundSize': 'cover',
+                                'backgroundPosition': 'center'
+                            }}
+                        >
+                            &nbsp;
+                        </Slide>
+                    </SlideMask>
+                    <SlideMask>
+                        <Slide
+                            className="target"
+                            style={{
+                                'background': `url(${Amex})`,
+                                'backgroundSize': 'cover',
+                                'backgroundPosition': 'center'
+                            }}
+                        >
+                            &nbsp;
+                        </Slide>
+                    </SlideMask>
+                    <SlideMask>
+                        <Slide
+                            className="target"
+                            style={{
+                                'background': `url(${SonomaPac})`,
+                                'backgroundSize': 'cover',
+                                'backgroundPosition': 'center'
+                            }}
+                        >
+                            &nbsp;
+                        </Slide>
+                    </SlideMask>
+                    <SlideMask>
+                        <Slide
+                            className="target"
+                            style={{ 
+                                'background': `url(${FHGT})`,
+                                'backgroundSize': 'cover',
+                                'backgroundPosition': 'center'
+                            }}
+                        >
+                            &nbsp;
+                        </Slide>
+                    </SlideMask>
+                    <SlideMask>
+                        <Slide
+                            className="target"
+                            style={{
+                                'background': `url(${Thrifty})`,
+                                'backgroundSize': 'cover',
+                                'backgroundPosition': 'center'
+                            }}
+                        >
+                            &nbsp;
+                        </Slide>
+                    </SlideMask>
+
                 </Slides>
 
             </Row>

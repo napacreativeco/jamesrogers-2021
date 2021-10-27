@@ -50,7 +50,7 @@ export default function Contact() {
 
                 <ContactList>
                     <div>
-                        <ul>
+                        <ul data-aos="fade-up">
                             <li>
                                 <a href="https://www.napacreativeco.com" title="Napa Creative Company">Napa Creative Co.</a>
                             </li>

@@ -40,7 +40,7 @@ export default function Resume() {
                 </div>
 
                 <div>
-                    <ul>
+                    <ul data-aos="fade-up">
                         <li>
                             <a href="/resume_2021.pdf" title="Download Resume">Download now</a>
                         </li>
