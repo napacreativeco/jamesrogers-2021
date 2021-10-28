@@ -50,11 +50,6 @@ const IndexPage = () => {
     }, []);
 
 
-    const isTouchDevice = () => {
-        return window.matchMedia("(pointer: coarse)").matches
-    }
-    console.log(isTouchDevice());
-
     return ( 
         <CustomCursorManager>
             <main style={pageStyles}>
