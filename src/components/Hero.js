@@ -68,15 +68,17 @@ const Icon = styled.img`
     }
 `;
 
+window.onscroll = function() {
+    const currentScrollPos = window.pageYOffset;
+
+    document.getElementById("mouse").style.opacity = 1 - currentScrollPos / 250;
+
+    console.log(currentScrollPos);
+}
+
 export default function Hero() {
     
-    window.onscroll = function() {
-        const currentScrollPos = window.pageYOffset;
 
-        document.getElementById("mouse").style.opacity = 1 - currentScrollPos / 250;
-
-        console.log(currentScrollPos);
-    }
 
     return (
         <HeroStyles>
