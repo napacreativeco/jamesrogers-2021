@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 
 import Scroll from '../images/scroll.svg';
@@ -68,17 +68,19 @@ const Icon = styled.img`
     }
 `;
 
-window.onscroll = function() {
-    const currentScrollPos = window.pageYOffset;
 
-    document.getElementById("mouse").style.opacity = 1 - currentScrollPos / 250;
-
-    console.log(currentScrollPos);
-}
 
 export default function Hero() {
     
-
+    useEffect(() => {
+        window.onscroll = function() {
+            const currentScrollPos = window.pageYOffset;
+        
+            document.getElementById("mouse").style.opacity = 1 - currentScrollPos / 250;
+        
+            console.log(currentScrollPos);
+        }
+    })
 
     return (
         <HeroStyles>
