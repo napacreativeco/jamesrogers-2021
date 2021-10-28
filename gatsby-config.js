@@ -5,6 +5,14 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-styled-components",
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+      }
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",

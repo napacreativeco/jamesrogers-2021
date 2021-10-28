@@ -25,9 +25,10 @@ const RecentStyles = styled.section`
 
 const Row = styled.div`
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     height: 100%;
     width: 100%;
+    padding: 20px;
 
     @media (max-width: 550px) {
         grid-template-columns: 1fr;
@@ -40,7 +41,7 @@ const Slides = styled.div`
     align-items: stretch;
     grid-gap: 4px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
         grid-template-columns: 1fr;
     }
 `;
@@ -56,19 +57,24 @@ const Slide = styled.div`
     &:hover {
         transform: scale(1.1) rotate(2deg);
     }
+    position: relative;
+
+    padding-top: 75%; /* 4:3 Aspect Ratio (divide 3 by 4 = 0.75) */
+    
+`;
+
+const SlideLabel = styled.div`
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #000;
+    color: #fff;
 `;
 
 const SlideMask = styled.div`
-    @media (min-width: 1300px) {
-        height: 400px;
-    }
-    @media (max-width: 768px) {
-        height: 350px;
-    }
-    height: 200px;
+
     overflow: hidden;
 `;
-
 
 export default function RecentWork() {
 
@@ -79,15 +85,16 @@ export default function RecentWork() {
     }
     const mouseShrink = () => {
         const cursors = document.querySelector('.main-cursor .main-cursor-background');
-        cursors.style.width = '40px';
-        cursors.style.height = '40px';
+        cursors.style.width = '20px';
+        cursors.style.height = '20px';
     }
+
 
     return (
         <RecentStyles>
 
             <Row>
-                <div style={{ 'padding': '0px 20px 0px 20px' }}>
+                <div>
                     <h1>Recent Work</h1>
                 </div>
 
@@ -103,7 +110,7 @@ export default function RecentWork() {
                                 'backgroundPosition': 'center'
                             }}
                         >
-                            &nbsp;
+                            <SlideLabel className="slideLabel">TaskMatte</SlideLabel>
                         </Slide>
                     </SlideMask>
 

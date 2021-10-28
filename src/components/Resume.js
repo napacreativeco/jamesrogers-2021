@@ -32,7 +32,6 @@ const ResumeStyle = styled.section`
 const Row = styled.div`
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-gap: 20px;
     height: 100%;
     width: 100%;
     padding: 20px;
@@ -47,8 +46,8 @@ export default function Resume() {
     }
     const mouseShrink = () => {
         const cursors = document.querySelector('.main-cursor .main-cursor-background');
-        cursors.style.width = '40px';
-        cursors.style.height = '40px';
+        cursors.style.width = '20px';
+        cursors.style.height = '20px';
     }
 
     return (

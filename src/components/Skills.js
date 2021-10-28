@@ -28,7 +28,7 @@ const SkillsStyles = styled.section`
 const Row = styled.div`
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-gap: 20px;
+    grid-gap: 0px;
     height: 100%;
     width: 100%;
     padding: 20px;
@@ -37,6 +37,7 @@ const Row = styled.div`
 const SkillList = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
     @media (max-width: 768px) {
         grid-template-columns: 1fr 1fr;
     }

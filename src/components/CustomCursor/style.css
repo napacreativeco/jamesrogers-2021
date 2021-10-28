@@ -20,8 +20,8 @@
   mix-blend-mode: hard-light;
 }
 .main-cursor .main-cursor-background {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   background: rgba(0, 0, 0, 1);
   border-radius: 50%;
   transition: all 0.7s;
