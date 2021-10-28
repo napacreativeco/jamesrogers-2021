@@ -4,9 +4,9 @@ import styled from "styled-components"
 import WebIllustration from "../images/web-illustration.png"
 import Farma from "../images/farmapothica.jpg"
 import Amex from "../images/amex.png"
-import SonomaPac from "../images/sonomapac.jpg"
 import FHGT from "../images/fhgt.jpg"
 import Thrifty from "../images/thrifty.jpg"
+import TaskMatte from "../images/taskmatte.png"
 
 
 const RecentStyles = styled.section`
@@ -36,7 +36,7 @@ const Row = styled.div`
 
 const Slides = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: stretch;
     grid-gap: 4px;
 
@@ -54,7 +54,7 @@ const Slide = styled.div`
     transition: all 1s;
     height: 100%;
     &:hover {
-        transform: scale(1.2);
+        transform: scale(1.1) rotate(2deg);
     }
 `;
 
@@ -69,9 +69,19 @@ const SlideMask = styled.div`
     overflow: hidden;
 `;
 
+
 export default function RecentWork() {
 
-
+    const mouseGrow = () => {
+        const cursors = document.querySelector('.main-cursor .main-cursor-background');
+        cursors.style.width = '100px';
+        cursors.style.height = '100px';
+    }
+    const mouseShrink = () => {
+        const cursors = document.querySelector('.main-cursor .main-cursor-background');
+        cursors.style.width = '40px';
+        cursors.style.height = '40px';
+    }
 
     return (
         <RecentStyles>
@@ -82,9 +92,25 @@ export default function RecentWork() {
                 </div>
 
                 <Slides data-aos="fade-up">
+                    <SlideMask>
+                        <Slide
+                            onMouseEnter={mouseGrow}
+                            onMouseLeave={mouseShrink}
+                            className="target"
+                            style={{
+                                'background': `url(${TaskMatte})`,
+                                'backgroundSize': 'cover',
+                                'backgroundPosition': 'center'
+                            }}
+                        >
+                            &nbsp;
+                        </Slide>
+                    </SlideMask>
 
                     <SlideMask>
                         <Slide 
+                            onMouseEnter={mouseGrow}
+                            onMouseLeave={mouseShrink}
                             className="target"
                             style={{ 
                                 'background': `url(${WebIllustration})`,
@@ -95,8 +121,11 @@ export default function RecentWork() {
                             &nbsp;
                         </Slide>
                     </SlideMask>
+
                     <SlideMask>
                         <Slide
+                            onMouseEnter={mouseGrow}
+                            onMouseLeave={mouseShrink}
                             className="target"
                             style={{ 
                                 'background': `url(${Farma})`,
@@ -107,8 +136,11 @@ export default function RecentWork() {
                             &nbsp;
                         </Slide>
                     </SlideMask>
+
                     <SlideMask>
                         <Slide
+                            onMouseEnter={mouseGrow}
+                            onMouseLeave={mouseShrink}
                             className="target"
                             style={{
                                 'background': `url(${Amex})`,
@@ -119,20 +151,11 @@ export default function RecentWork() {
                             &nbsp;
                         </Slide>
                     </SlideMask>
+
                     <SlideMask>
                         <Slide
-                            className="target"
-                            style={{
-                                'background': `url(${SonomaPac})`,
-                                'backgroundSize': 'cover',
-                                'backgroundPosition': 'center'
-                            }}
-                        >
-                            &nbsp;
-                        </Slide>
-                    </SlideMask>
-                    <SlideMask>
-                        <Slide
+                            onMouseEnter={mouseGrow}
+                            onMouseLeave={mouseShrink}
                             className="target"
                             style={{ 
                                 'background': `url(${FHGT})`,
@@ -143,8 +166,11 @@ export default function RecentWork() {
                             &nbsp;
                         </Slide>
                     </SlideMask>
+                    
                     <SlideMask>
                         <Slide
+                            onMouseEnter={mouseGrow}
+                            onMouseLeave={mouseShrink}
                             className="target"
                             style={{
                                 'background': `url(${Thrifty})`,

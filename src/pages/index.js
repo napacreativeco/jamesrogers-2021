@@ -34,6 +34,7 @@ const LoadingStyles = styled.div`
     z-index: 99999;
 `;
 
+
 const IndexPage = () => {
 
     const [loading, setLoading] = useState('1');
@@ -48,10 +49,11 @@ const IndexPage = () => {
       Aos.init({ duration: 1000 });
     }, []);
 
+
     const isTouchDevice = () => {
         return window.matchMedia("(pointer: coarse)").matches
     }
-    console.log(isTouchDevice())
+    console.log(isTouchDevice());
 
     return ( 
         <CustomCursorManager>

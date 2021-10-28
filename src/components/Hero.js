@@ -42,7 +42,7 @@ const HeroStyles = styled.section`
 export default function Hero() {
     return (
         <HeroStyles>
-            <h1 className="target">Front-End Development,<br />Product Design</h1>
+            <h1 className="target">Product Design,<br />Web Development</h1>
             <p>James Rogers.</p>
         </HeroStyles>
     )

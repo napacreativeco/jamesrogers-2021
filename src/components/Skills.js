@@ -27,7 +27,7 @@ const SkillsStyles = styled.section`
 
 const Row = styled.div`
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     grid-gap: 20px;
     height: 100%;
     width: 100%;
