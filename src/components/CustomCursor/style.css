@@ -24,11 +24,10 @@
   height: 20px;
   background: rgba(0, 0, 0, 1);
   border-radius: 50%;
-  transition: all 0.7s;
+  transition: all 0.3s;
+  mix-blend-mode: difference;
 }
-.main-cursor-background {
-  background: white;
-}
+
 .secondary-cursor {
   width: 60px;
   height: 60px;

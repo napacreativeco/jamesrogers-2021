@@ -41,8 +41,8 @@ export default function Resume() {
 
     const mouseGrow = () => {
         const cursors = document.querySelector('.main-cursor .main-cursor-background');
-        cursors.style.width = '100px';
-        cursors.style.height = '100px';
+        cursors.style.width = '60px';
+        cursors.style.height = '60px';
     }
     const mouseShrink = () => {
         const cursors = document.querySelector('.main-cursor .main-cursor-background');

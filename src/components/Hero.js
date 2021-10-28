@@ -6,13 +6,22 @@ import Scroll from '../images/scroll.svg';
 const HeroStyles = styled.section`
     width: 100%;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
     padding: 60px;
-    position: relative;
+
+    #mouse {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    a {
+        margin: 0;
+        padding: 0;
+    }
+    transition: all 0.7s;
     h1 {
         font-size: 4vw;
         margin: 0;
@@ -40,24 +49,43 @@ const HeroStyles = styled.section`
             font-size: 4vw;
         }
     }
+
+
 `;
 
 const Icon = styled.img`
-    width: 200px;
     position: absolute;
     bottom: 20px;
-
+    width: 120px;
+    
+    animation: bob infinite 1s;
+    @keyframes bob {
+        0% {bottom:20px;}
+        100% {bottom:10px;}
+    }
     @media screen and (max-width: 768px) {
         display: none;
     }
 `;
 
 export default function Hero() {
+    
+    window.onscroll = function() {
+        const currentScrollPos = window.pageYOffset;
+
+        document.getElementById("mouse").style.opacity = 1 - currentScrollPos / 250;
+
+        console.log(currentScrollPos);
+    }
+
     return (
         <HeroStyles>
-            <h1 className="target">Digital  Product Design,<br />Web Development</h1>
-            <p>James Rogers.</p>
-            <Icon  data-aos="fade-up" data-aos-delay="400" src={Scroll} alt="" width="200px" />
+            <div id="mouse">
+                <h1 className="target">Digital  Product Design,<br />Web Development</h1>
+                <p>James Rogers.</p>
+                <Icon data-aos="fade-up" data-aos-delay="5000" src={Scroll} alt="" width="200px" />
+            </div>
+            
         </HeroStyles>
     )
 }

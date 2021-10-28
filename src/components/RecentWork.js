@@ -80,8 +80,8 @@ export default function RecentWork() {
 
     const mouseGrow = () => {
         const cursors = document.querySelector('.main-cursor .main-cursor-background');
-        cursors.style.width = '100px';
-        cursors.style.height = '100px';
+        cursors.style.width = '60px';
+        cursors.style.height = '60px';
     }
     const mouseShrink = () => {
         const cursors = document.querySelector('.main-cursor .main-cursor-background');
@@ -91,7 +91,7 @@ export default function RecentWork() {
 
 
     return (
-        <RecentStyles>
+        <RecentStyles id="recent-work">
 
             <Row>
                 <div>
