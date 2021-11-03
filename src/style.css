@@ -27,3 +27,14 @@ html,
 body {
     cursor: none;
 }
+a { text-decoration: none; cursor: none; }
+
+@keyframes fadeUp {
+    0% { opacity: 0; margin-top: 40px; }
+    100% { opacity: 1; margin-top: 0px; }
+}
+
+@keyframes dash-spinner {
+    0% { border-style: dashed; transform: rotate(0deg); }
+    100% { border-style: dashed; transform: rotate(360deg);  }
+}

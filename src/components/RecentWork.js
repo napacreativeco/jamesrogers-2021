@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 import WebIllustration from "../images/web-illustration.png"
@@ -54,27 +54,49 @@ const Slide = styled.div`
     justify-content: center;
     transition: all 1s;
     height: 100%;
+    position: relative;
     &:hover {
         transform: scale(1.1) rotate(2deg);
     }
-    position: relative;
 
     padding-top: 75%; /* 4:3 Aspect Ratio (divide 3 by 4 = 0.75) */
     
 `;
 
 const SlideLabel = styled.div`
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: #000;
+    display: none;
+    flex-direction: column;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
+    position: absolute;
+    transform: rotate(-2deg);
+    padding: 20px;
+    h2 {
+        padding: 0px;
+        margin: 0px;
+    }
+    p {
+
+    }
+    a { 
+        border: 2px solid #fff;
+        border-radius: 50px;
+        padding: 6px 10px;
+    }
+    a:hover {
+        color: #000 !important;
+        background: #fff;
+    }
 `;
 
 const SlideMask = styled.div`
-
     overflow: hidden;
 `;
+
 
 export default function RecentWork() {
 
@@ -89,6 +111,12 @@ export default function RecentWork() {
         cursors.style.height = '20px';
     }
 
+    const [one, setOne] = useState({display: 'none', animation: 'none'});
+    const [two, setTwo] = useState({display: 'none'});
+    const [three, setThree] = useState({display: 'none'});
+    const [four, setFour] = useState({display: 'none'});
+    const [five, setFive] = useState({display: 'none'});
+    const [six, setSix] = useState({display: 'none'});
 
     return (
         <RecentStyles id="recent-work">
@@ -101,91 +129,128 @@ export default function RecentWork() {
                 <Slides data-aos="fade-up">
                     <SlideMask>
                         <Slide
-                            onMouseEnter={mouseGrow}
-                            onMouseLeave={mouseShrink}
-                            className="target"
+                            onMouseEnter={e => {
+                                mouseGrow();
+                                setOne({ display: 'flex', animation: 'fadeUp 1s ease' });
+                            }}
+                            onMouseLeave={e => {
+                                mouseShrink();
+                                setOne({ display: 'none' })
+                            }}
                             style={{
                                 'background': `url(${TaskMatte})`,
                                 'backgroundSize': 'cover',
                                 'backgroundPosition': 'center'
                             }}
                         >
-                            <SlideLabel className="slideLabel">TaskMatte</SlideLabel>
+                            <SlideLabel style={one} className="slideLabel">
+                                <h2>TaskMatte</h2>
+                                <p>UI Design</p>
+
+                                <div style={{ 'marginTop': '10px' }}>
+                                    <a href="/taskmatte/" style={{ 'color': '#fff' }}>+ Read more</a>
+                                </div>
+                            </SlideLabel>
                         </Slide>
                     </SlideMask>
 
                     <SlideMask>
                         <Slide 
-                            onMouseEnter={mouseGrow}
-                            onMouseLeave={mouseShrink}
-                            className="target"
+                            onMouseEnter={e => {
+                                mouseGrow();
+                                setTwo({ display: 'flex', animation: 'fadeUp 1s ease' });
+                            }}
+                            onMouseLeave={e => {
+                                mouseShrink();
+                                setTwo({ display: 'none' })
+                            }}
                             style={{ 
                                 'background': `url(${WebIllustration})`,
                                 'backgroundSize': 'cover',
                                 'backgroundPosition': 'center'
                             }}
-                        >
-                            &nbsp;
+                        >   
+                            <SlideLabel style={two} className="slideLabel">Illustration</SlideLabel>
                         </Slide>
                     </SlideMask>
 
                     <SlideMask>
                         <Slide
-                            onMouseEnter={mouseGrow}
-                            onMouseLeave={mouseShrink}
-                            className="target"
+                            onMouseEnter={e => {
+                                mouseGrow();
+                                setThree({ display: 'flex', animation: 'fadeUp 1s ease' });
+                            }}
+                            onMouseLeave={e => {
+                                mouseShrink();
+                                setThree({ display: 'none' })
+                            }}
                             style={{ 
                                 'background': `url(${Farma})`,
                                 'backgroundSize': 'cover',
                                 'backgroundPosition': 'center'
                             }}
                         >
-                            &nbsp;
+                            <SlideLabel style={three} className="slideLabel">Farmapothica</SlideLabel>
                         </Slide>
                     </SlideMask>
 
                     <SlideMask>
                         <Slide
-                            onMouseEnter={mouseGrow}
-                            onMouseLeave={mouseShrink}
-                            className="target"
+                            onMouseEnter={e => {
+                                mouseGrow();
+                                setFour({ display: 'flex', animation: 'fadeUp 1s ease' });
+                            }}
+                            onMouseLeave={e => {
+                                mouseShrink();
+                                setFour({ display: 'none' })
+                            }}
                             style={{
                                 'background': `url(${Amex})`,
                                 'backgroundSize': 'cover',
                                 'backgroundPosition': 'center'
                             }}
                         >
-                            &nbsp;
+                            <SlideLabel style={four} className="slideLabel">Sharpen.design Challenges</SlideLabel>
                         </Slide>
                     </SlideMask>
 
                     <SlideMask>
                         <Slide
-                            onMouseEnter={mouseGrow}
-                            onMouseLeave={mouseShrink}
-                            className="target"
+                            onMouseEnter={e => {
+                                mouseGrow();
+                                setFive({ display: 'flex', animation: 'fadeUp 1s ease' });
+                            }}
+                            onMouseLeave={e => {
+                                mouseShrink();
+                                setFive({ display: 'none' })
+                            }}
                             style={{ 
                                 'background': `url(${FHGT})`,
                                 'backgroundSize': 'cover',
                                 'backgroundPosition': 'center'
                             }}
                         >
-                            &nbsp;
+                            <SlideLabel style={five} className="slideLabel">Firm Hands Gentle Touch</SlideLabel>
                         </Slide>
                     </SlideMask>
                     
                     <SlideMask>
                         <Slide
-                            onMouseEnter={mouseGrow}
-                            onMouseLeave={mouseShrink}
-                            className="target"
+                            onMouseEnter={e => {
+                                mouseGrow();
+                                setSix({ display: 'flex', animation: 'fadeUp 1s ease' });
+                            }}
+                            onMouseLeave={e => {
+                                mouseShrink();
+                                setSix({ display: 'none' })
+                            }}
                             style={{
                                 'background': `url(${Thrifty})`,
                                 'backgroundSize': 'cover',
                                 'backgroundPosition': 'center'
                             }}
                         >
-                            &nbsp;
+                            <SlideLabel style={six} className="slideLabel">Thriftly</SlideLabel>
                         </Slide>
                     </SlideMask>
 
